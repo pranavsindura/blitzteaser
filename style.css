@@ -32,7 +32,7 @@ path{
 
 }
 #textfade {
-    animation: textfadeanim 500ms linear alternate infinite;
+    animation: textfadeanim 20s linear alternate infinite;
     stroke:none;
     fill:#451521;
 }
@@ -103,10 +103,30 @@ path{
     }
 }
 @keyframes textfadeanim {
-    0%{
+   /* 0%{
         opacity: 0;
     }
     100%{
+        opacity: 1;
+    }*/
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%
+    {
+        opacity: 1;
+    }
+    100%{
+
         opacity: 1;
     }
 }
