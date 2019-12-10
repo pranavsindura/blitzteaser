@@ -6,15 +6,10 @@ body {
 path{
 	fill: #451521;
 }
-#group{
-	animation: mov 10s linear alternate infinite;
-}
-#curve {
-    /*stroke-dasharray: 350;*/
+#curvesmall {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: dash 20s linear alternate infinite;
-    /*stroke:#917c3d;*/
+    animation: dashsmallanim 20s linear alternate infinite;
     stroke: #451521;
     stroke-width: 1.5px;
     fill:none;
@@ -22,103 +17,96 @@ path{
 }
 
 #curvebig {
-    /*stroke-dasharray: 1000;*/
-    stroke-dasharray: 3000;
-    stroke-dashoffset: 3000;
-    animation: dashbig 20s linear alternate infinite;
-    /*stroke:goldenrod;*/
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dashbiganim 20s linear alternate infinite;
     stroke:#451521;
-    /*stroke:#451521;*/
     stroke-width: 1.5px;
     fill:none;
     opacity: 75%;
 }
-#curvefadebig {
-    /*stroke-dasharray: 1000;*/
-    /*stroke-dasharray: 3000;*/
-    /*stroke-dashoffset: 3000;*/
-    animation: curvefade 20s linear alternate infinite;
-    /*stroke:goldenrod;*/
+#curvefade {
+    animation: curvefadeanim 20s linear alternate infinite;
     stroke:none;
-    /*stroke-width: 2px;*/
     fill:#451521;
 
 }
-@keyframes mov{
-	0%{
-
-	}
-	50%
-	{
-		
-	}
-
+#textfade {
+    animation: textfadeanim 500ms linear alternate infinite;
+    stroke:none;
+    fill:#451521;
 }
-@keyframes dashbig {
-    0% {
-        stroke-dashoffset: 3000;
+@keyframes dashbiganim {
+    0%{
+        stroke-dashoffset: 2000;
     }
-    40% {
+    20%{
         stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 0;
+    }
+    60%{
+        stroke-dashoffset: 2000;
     }
     80%
     {
-    	stroke-dashoffset: 3000;
+        stroke-dashoffset: 0;
     }
-    /*50%{
-		stroke-dashoffset: 0;
+    100%{
 
-    }*/
-    100%
-    {
-    	stroke-dashoffset: 0;
+        stroke-dashoffset: 0;
     }
 }
-@keyframes dash {
-    0% {
+@keyframes dashsmallanim {
+    0%{
         stroke-dashoffset: 1000;
     }
-    40% {
+    20%{
         stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 0;
+    }
+    60%{
+        stroke-dashoffset: 1000;
     }
     80%
     {
-    	stroke-dashoffset: 1000;
+        stroke-dashoffset: 0;
     }
-    
-    /*50%{
-		stroke-dashoffset: 0;
-    }*/
-    100%
-    {
-    	stroke-dashoffset: 0;
+    100%{
+
+        stroke-dashoffset: 0;
     }
 }
-@keyframes curvefade {
-    0% {
-        /*stroke-dashoffset: 1000;*/
-        opacity:0;
+@keyframes curvefadeanim {
+    0%{
+        opacity: 0;
     }
-    /*40% {
-        stroke-dashoffset: 0;
+    20%{
+        opacity: 0.8;
+    }
+    40%{
+        opacity: 0.8;
+    }
+    60%{
+        opacity: 0;
     }
     80%
     {
-    	stroke-dashoffset: 1000;
+        opacity: 0.8;
     }
-    */
-    20%{
-    	opacity:0;
+    100%{
+
+        opacity: 0.8;
     }
-    40%
-    {
-    	opacity: 75%;
+}
+@keyframes textfadeanim {
+    0%{
+        opacity: 0;
     }
-    80%{
-		opacity:0;
-    }
-    100%
-    {
-    	opacity:75%;
+    100%{
+        opacity: 1;
     }
 }
